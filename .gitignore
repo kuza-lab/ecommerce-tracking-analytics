@@ -1,2 +1,4 @@
 node_modules
-/lib
+/lib/analytics.d.ts
+/lib/axios.min.js
+/lib/index.html

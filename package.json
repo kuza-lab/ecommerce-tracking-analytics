@@ -1,19 +1,30 @@
 {
   "name": "idt-ecommerce-analytics",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "IDT E-Commerce Analytics",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "mocha --reporter spec --require ts-node/register './src/__tests__/*.test.ts'",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "document": "typedoc --out ./docs --exclude **/node_modules/** ./src/__tests__  --mode file --includeDeclarations --excludeExternals --excludePrivate --excludeProtected --ignoreCompilerErrors --theme default --name JavaScript Package for IDT E-Commerce Analytics --readme README.md ./src"
   },
   "files": [
     "lib/**/*"
   ],
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "IDT",
+    "Analytics",
+    "Tracker"
+  ],
+  "author": "Phelix Juma",
   "license": "ISC",
   "devDependencies": {
     "@types/mocha": "^7.0.2",
@@ -26,6 +37,7 @@
     "ts-node": "^8.10.1",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.17.7",
     "typescript": "^3.9.3"
   }
 }

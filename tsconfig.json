@@ -4,8 +4,12 @@
     "module": "commonjs",
     "declaration": true,
     "outDir": "./lib",
+    "lib": ["es5", "es6", "dom"],
+    "rootDir": "./src/",
     "strict": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }
+
+// "outFile": "./lib/idt-ecommerce-analytics.js",
