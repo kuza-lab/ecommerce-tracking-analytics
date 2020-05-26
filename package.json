@@ -6,15 +6,16 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "mocha --reporter spec --require ts-node/register './src/__tests__/*.test.ts'",
-    "build": "tsc",
+    "build": "tsc && npm run minify",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
+    "prepublishOnly": "npm test",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "document": "typedoc --out ./docs --exclude **/node_modules/** ./src/__tests__  --mode file --includeDeclarations --excludeExternals --excludePrivate --excludeProtected --ignoreCompilerErrors --theme default --name JavaScript Package for IDT E-Commerce Analytics --readme README.md ./src"
+    "document": "typedoc --out ./docs --exclude **/node_modules/** ./src/__tests__  --mode file --includeDeclarations --excludeExternals --excludePrivate --excludeProtected --ignoreCompilerErrors --theme default --name JavaScript Package for IDT E-Commerce Analytics --readme README.md ./src",
+    "minify": "uglifyjs lib/analytics.js --compress --mangle --warn --output lib/analytics.min.js"
   },
   "files": [
     "lib/**/*"
@@ -38,6 +39,7 @@
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.17.7",
-    "typescript": "^3.9.3"
+    "typescript": "^3.9.3",
+    "uglify-js": "^3.9.3"
   }
 }

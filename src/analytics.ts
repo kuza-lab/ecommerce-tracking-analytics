@@ -158,304 +158,888 @@ class Meta {
      * unique id for the browsing session
      */
     session: string = "";
+    /**
+     * Whether the user is logged in or not
+     */
     is_anon: boolean = true;
+    /**
+     * The id of the user. If not logged in, a randomly generated id is used
+     */
     user_id: string = "";
+    /**
+     * Date and time for the event
+     */
     datetime: string = "";
+    /**
+     * The page where the event occurred
+     */
     page: string = "";
+    /**
+     * The url accessed
+     */
     url: string = "";
+    /**
+     * The page url the user is coming from
+     */
     referrer: string = "";
+    /**
+     * Identifies the browser, device and platform used to access this.
+     */
     user_agent: string = "";
+}
+
+class Campaign {
+    /**
+     * Identifies which site sent the traffic, and is a required parameter.
+     */
+    utm_source: string = "";
+    /**
+     * Identifies what type of link was used, such as cost per click or email.
+     */
+    utm_medium: string = "";
+    /**
+     * Identifies what specifically was clicked to bring the user to the site, such as a banner ad or a text link.
+     */
+    utm_content: string = "";
+    /**
+     * Identifies a specific product promotion or strategic campaign.
+     */
+    utm_campaign: string = "";
+    /**
+     * Identifies search terms.
+     */
+    utm_term: string = "";
 }
 
 /**
  * List of interfaces defining the structure of the data to accompany each of the events
  */
 interface Product {
+    /**
+     * Id of the product
+     */
     product_id: string;
+    /**
+     * Stock keeping unit
+     */
     sku: string;
+    /**
+     * product category
+     */
     category: string;
+    /**
+     * Name of the product
+     */
     name: string;
+    /**
+     * Product brand
+     */
     brand: string;
+    /**
+     * Product variant eg black
+     */
     variant:string;
+    /**
+     * The price for the prduct
+     */
     price: string;
+    /**
+     * Where in cart, quentity being purchased of the product
+     */
     quantity: string;
+    /**
+     * The coupon code applied for the purchase
+     */
     coupon: string;
+    /**
+     * The position on the page where the product is located
+     */
     position: string;
+    /**
+     * url to access the product
+     */
     url: string;
+    /**
+     * Link to the product image
+     */
     image_url: string;
 }
 
 interface Filter {
-    type: string; // Id of the filter type that the customer is using eg price
-    value: string; // Id of the selection that the customer chose eg Under 100
+    /**
+     * Id of the filter type that the customer is using eg price
+     */
+    type: string;
+    /**
+     * Id of the selection that the customer chose eg Under 100
+     */
+    value: string;
 }
 
 interface Sort {
-    type: string; // Id of the sort type that the customer is using eg price
-    value: string; // Id of the selection type the the customer is using (ascending, descending) eg desc
+    /**
+     * Id of the sort type that the customer is using eg price
+     */
+    type: string;
+    /**
+     * Id of the selection type the the customer is using (ascending, descending) eg desc
+     */
+    value: string;
 }
 
 interface ProductsSearched {
+    /**
+     * Search keyword
+     */
     query: string;
 }
 
 interface ProductListViewed {
+    /**
+     * Identifies the type of list eg home page products, recommendations, top grossing et al
+     */
     category: string;
-    products: Array<Product>;
+    /**
+     * List of products
+     */
+    products: Product[];
 }
 
 interface ProductListFiltered {
+    /**
+     * Identifies the type of list eg home page products, recommendations, top grossing et al
+     */
     category: string;
-    filters: Array<Filter>;
-    sorts: Array<Sort>;
-    products: Array<Product>;
+    /**
+     * List of filter parameters
+     */
+    filters: Filter[];
+    /**
+     * List of sort parameters
+     */
+    sorts: Sort[];
+    /**
+     * List of products
+     */
+    products: Product[];
 }
 
 interface PromotionViewed {
+    /**
+     * id of the promotion
+     */
     promotion_id: string;
-    creative: string; // eg top_banner_2
+    /**
+     * Design creative type for the promotion eg eg top_banner_2
+     */
+    creative: string;
+    /**
+     * Name of the promotion
+     */
     name: string;
-    position: string; // eg home_banner_top
+    /**
+     * Where the promotion is eg eg home_banner_top
+     */
+    position: string;
 }
 
 interface PromotionClicked {
+    /**
+     * id of the promotion
+     */
     promotion_id: string;
-    creative: string; // eg top_banner_2
+    /**
+     * Design creative type for the promotion eg eg top_banner_2
+     */
+    creative: string;
+    /**
+     * Name of the promotion
+     */
     name: string;
-    position: string; // eg home_banner_top
+    /**
+     * Where the promotion is eg eg home_banner_top
+     */
+    position: string;
 }
 
 interface ProductAdded {
+    /**
+     * id of the cart
+     */
     cart_id: string;
+    /**
+     * id of the product
+     */
     product_id: string;
+    /**
+     * product sku
+     */
     sku: string;
+    /**
+     * category of the product
+     */
     category: string;
+    /**
+     * name of the product
+     */
     name: string;
+    /**
+     * product brand
+     */
     brand: string;
+    /**
+     * product variant eg black
+     */
     variant:string;
+    /**
+     * prodct price
+     */
     price: string;
+    /**
+     * product quantity
+     */
     quantity: string;
+    /**
+     * Product coupon
+     */
     coupon: string;
+    /**
+     * Product position
+     */
     position: string;
+    /**
+     * Product url
+     */
     url: string;
+    /**
+     * link to the product image
+     */
     image_url: string;
 }
 
 interface ProductRemoved {
+    /**
+     * id of the cart
+     */
     cart_id: string;
+    /**
+     * id of the product
+     */
     product_id: string;
+    /**
+     * product sku
+     */
     sku: string;
+    /**
+     * category of the product
+     */
     category: string;
+    /**
+     * name of the product
+     */
     name: string;
+    /**
+     * product brand
+     */
     brand: string;
+    /**
+     * product variant eg black
+     */
     variant:string;
+    /**
+     * prodct price
+     */
     price: string;
+    /**
+     * product quantity
+     */
     quantity: string;
+    /**
+     * Product coupon
+     */
     coupon: string;
+    /**
+     * Product position
+     */
     position: string;
+    /**
+     * Product url
+     */
     url: string;
+    /**
+     * link to the product image
+     */
     image_url: string;
 }
 
 interface Cart {
+    /**
+     * id of the cart
+     */
     cart_id: string;
-    products: Array<Product>
+    /**
+     * List of products in the cart
+     */
+    products: Product[]
 }
 
 interface CheckoutStarted {
+    /**
+     * id of the order
+     */
     order_id: string;
-    affiliation: string; // Store or affiliation from which this transaction occurred (e.g. Google Store)
-    value: number; // Revenue ($) with discounts and coupons added in.
-    revenue: number; // Revenue ($) associated with the transaction (excluding shipping and tax)
-    shipping: number; // Shipping cost associated with the transaction
+    /**
+     * Revenue with discounts and coupons added in.
+     */
+    value: number;
+    /**
+     * Revenue associated with the transaction (excluding shipping and tax)
+     */
+    revenue: number;
+    /**
+     * Shipping cost associated with the transaction
+     */
+    shipping: number;
+    /**
+     * tax amount
+     */
     tax: number;
+    /**
+     * discount amount
+     */
     discount: number;
-    currency: String;
-    products: Array<Product>
+    /**
+     * currency of the transaction
+     */
+    currency: string;
+    /**
+     * List of products
+     */
+    products: Product[]
 }
 
 interface CheckoutStepViewed {
-    checkout_id: string; // Checkout transaction ID
+    /**
+     * Checkout transaction ID
+     */
+    checkout_id: string;
+    /**
+     * The checkout step eg step 1
+     */
     step: number;
+    /**
+     * shipping method selected by the user
+     */
     shipping_method: string;
+    /**
+     * payment method selected by the user
+     */
     payment_method: string;
-
 }
 
 interface CheckoutStepCompleted {
-    checkout_id: string; // Checkout transaction ID
+    /**
+     * Checkout transaction ID
+     */
+    checkout_id: string;
+    /**
+     * The checkout step eg step 1
+     */
     step: number;
+    /**
+     * shipping method selected by the user
+     */
     shipping_method: string;
+    /**
+     * payment method selected by the user
+     */
     payment_method: string;
-
 }
 
 interface PaymentInfoEntered {
+    /**
+     * Checkout transaction ID
+     */
     checkout_id: string;
+    /**
+     * id of the order
+     */
     order_id: string;
+    /**
+     * The checkout step eg step 1
+     */
     step: number;
+    /**
+     * shipping method selected by the user
+     */
     shipping_method: string;
-    payment_method: string
-
+    /**
+     * payment method selected by the user
+     */
+    payment_method: string;
 }
 
 interface OrdersUpdated {
+    /**
+     * id of the order
+     */
     order_id: string;
-    affiliation: string; // Store or affiliation from which this transaction occurred (e.g. Google Store)
-    total: number; // Revenue ($) with discounts and coupons added in
-    revenue: number; // Revenue ($) associated with the transaction (excluding shipping and tax)
-    shipping: number; // Shipping cost associated with the transaction
+    /**
+     * Revenue with discounts and coupons added in
+     */
+    total: number;
+    /**
+     * Revenue associated with the transaction (excluding shipping and tax)
+     */
+    revenue: number;
+    /**
+     * Shipping cost associated with the transaction
+     */
+    shipping: number;
+    /**
+     * tax amount
+     */
     tax: number;
+    /**
+     * discount amount
+     */
     discount: number;
+    /**
+     * coupon amount
+     */
     coupon: string;
-    currency: String;
-    products: Array<Product>
+    /**
+     * currency of the transaction
+     */
+    currency: string;
+    /**
+     * List of products
+     */
+    products: Product[]
 }
 
 interface OrderCompleted {
+    /**
+     * id of the checkout process
+     */
     checkout_id: string;
+    /**
+     * id of the order
+     */
     order_id: string;
-    affiliation: string;
-    subtotal: number; // Order total after discounts but before taxes and shipping
-    total: number; // Revenue ($) with discounts and coupons added in
-    revenue: number; // Revenue ($) associated with the transaction (excluding shipping and tax)
-    shipping: number; // Shipping cost associated with the transaction
+    /**
+     * Order total after discounts but before taxes and shipping
+     */
+    subtotal: number;
+    /**
+     * Revenue with discounts and coupons added in
+     */
+    total: number;
+    /**
+     * Revenue associated with the transaction (excluding shipping and tax)
+     */
+    revenue: number;
+    /**
+     * Shipping cost associated with the transaction
+     */
+    shipping: number;
+    /**
+     * tax amount
+     */
     tax: number;
+    /**
+     * discount amount
+     */
     discount: number;
+    /**
+     * coupon value
+     */
     coupon: string;
-    currency: String;
-    products: Array<Product>
+    /**
+     * currency of the transaction
+     */
+    currency: string;
+    /**
+     * List of products
+     */
+    products: Product[]
 }
 
 interface OrderRefunded {
+    /**
+     * id of the order
+     */
     order_id: string,
+    /**
+     * total amount refunded
+     */
     total: number,
+    /**
+     * currency of the transaction
+     */
     currency: string,
-    products: Array<Product>
+    /**
+     * List of products in the order
+     */
+    products: Product[]
 }
 
 interface OrderCancelled {
+    /**
+     * id of the order
+     */
     order_id: string;
-    affiliation: string; // Store or affiliation from which this transaction occurred (e.g. Google Store)
-    total: number; // Revenue ($) with discounts and coupons added in
-    revenue: number; // Revenue ($) associated with the transaction (excluding shipping and tax)
-    shipping: number; // Shipping cost associated with the transaction
+    /**
+     * Revenue with discounts and coupons added in
+     */
+    total: number;
+    /**
+     * Revenue associated with the transaction (excluding shipping and tax)
+     */
+    revenue: number;
+    /**
+     * Shipping cost associated with the transaction
+     */
+    shipping: number;
+    /**
+     * tax amount
+     */
     tax: number;
+    /**
+     * discount amount
+     */
     discount: number;
+    /**
+     * coupon value
+     */
     coupon: string;
-    currency: String;
-    products: Array<Product>
+    /**
+     * currency of the transaction
+     */
+    currency: string;
+    /**
+     * List of products
+     */
+    products: Product[]
 }
 
 interface CouponEntered {
+    /**
+     * id of the order
+     */
     order_id: string;
+    /**
+     * id of the cart
+     */
     cart_id: string;
-    coupon_id: string;
+    /**
+     * coupon code/id/name
+     */
+    coupon: string;
 }
 
 interface CouponApplied {
+    /**
+     * id of the order
+     */
     order_id: string;
+    /**
+     * id of the cart
+     */
     cart_id: string;
-    coupon_id: string;
-    coupon_name: string;
+    /**
+     * coupon code/id/name
+     */
+    coupon: string;
+    /**
+     * discount value
+     */
     discount: number;
 }
 
 interface CouponRemoved {
+    /**
+     * id of the order
+     */
     order_id: string;
+    /**
+     * id of the cart
+     */
     cart_id: string;
-    coupon_id: string;
-    coupon_name: string;
+    /**
+     * coupon code/id/name
+     */
+    coupon: string;
+    /**
+     * discount value
+     */
     discount: number;
 }
 
 interface CouponDenied {
+    /**
+     * id of the order
+     */
     order_id: string;
+    /**
+     * id of the cart
+     */
     cart_id: string;
-    coupon_id: string;
-    coupon_name: string;
+    /**
+     * coupon code/id/name
+     */
+    coupon: string;
+    /**
+     * reason for denial
+     */
     reason: string
 }
 
 interface ProductWishlist {
+    /**
+     * id of the wishlist
+     */
     wishlist_id: string;
-    wishlist_name: string;
+    /**
+     * id of the product
+     */
     product_id: string;
+    /**
+     * product sku
+     */
     sku: string;
+    /**
+     * product category
+     */
     category: string;
+    /**
+     * name of the product
+     */
     name: string;
+    /**
+     * product brand
+     */
     brand: string;
+    /**
+     * product variant eg black
+     */
     variant:string;
+    /**
+     * product price
+     */
     price: string;
+    /**
+     * Quantity of the product
+     */
     quantity: string;
+    /**
+     * coupon value
+     */
     coupon: string;
+    /**
+     * Position of the product
+     */
     position: string;
+    /**
+     * url to the product
+     */
     url: string;
+    /**
+     * link to product image
+     */
     image_url: string;
 }
 
 interface ProductWishlistToCart {
+    /**
+     * id of the wish list
+     */
     wishlist_id: string;
-    wishlist_name: string;
+    /**
+     * id of the cart
+     */
     cart_id: string;
+    /**
+     * id of the product
+     */
     product_id: string;
+    /**
+     * product sku
+     */
     sku: string;
+    /**
+     * product category
+     */
     category: string;
+    /**
+     * name of the product
+     */
     name: string;
+    /**
+     * product brand
+     */
     brand: string;
+    /**
+     * product variant e black
+     */
     variant:string;
+    /**
+     * price of the product
+     */
     price: string;
+    /**
+     * quantity of the product
+     */
     quantity: string;
+    /**
+     * product coupon used
+     */
     coupon: string;
+    /**
+     * position of the product
+     */
     position: string;
+    /**
+     * url to the product
+     */
     url: string;
+    /**
+     * link to product image
+     */
     image_url: string;
 }
 
 interface ProductShared {
+    /**
+     * medium shared to/by
+     */
     share_via: string;
+    /**
+     * the message for the share
+     */
     share_message: string;
+    /**
+     * recipients
+     */
     recipient: string;
+    /**
+     * id of the product
+     */
     product_id: string;
+    /**
+     * product sku
+     */
     sku: string;
+    /**
+     * product category
+     */
     category: string;
+    /**
+     * name of the product
+     */
     name: string;
+    /**
+     * product brand
+     */
     brand: string;
+    /**
+     * product variant eg color
+     */
     variant:string;
+    /**
+     * price of the product
+     */
     price: string;
+    /**
+     * url of the product
+     */
     url: string;
+    /**
+     * link to product image
+     */
     image_url: string;
 }
 
 interface CartProductId {
+    /**
+     * id of the product
+     */
     product_id: string
 }
 
 interface CartShared {
+    /**
+     * medium shared to/by
+     */
     share_via: string;
+    /**
+     * the message for the share
+     */
     share_message: string;
+    /**
+     * recipients
+     */
     recipient: string;
+    /**
+     * id of the cart
+     */
     cart_id: string;
-    products: Array<CartProductId>
+    /**
+     * list of products
+     */
+    products: CartProductId[]
 }
 
 interface ProductReviewed {
+    /**
+     * id of the product
+     */
     product_id: string;
+    /**
+     * id of the review
+     */
     review_id: string;
+    /**
+     * review message/content
+     */
     review_body: string;
+    /**
+     * rating value
+     */
     rating: number;
 }
 
 interface User {
+    /**
+     * id of the user
+     */
     user_id: string;
+    /**
+     * email of the user
+     */
     user_email: string;
+    /**
+     * phone number of the user
+     */
     user_phone: string;
+    /**
+     * name of the user
+     */
     user_name: string;
 }
 
 interface EventError {
+    /**
+     * error type eg "Missing form fields" 404 not found, 500 intenrnal server error et al
+     */
     type: string;
+    /**
+     * the error message
+     */
     message: string;
+    /**
+     * data accompanying the error
+     */
     data: any;
 }
 
@@ -465,8 +1049,14 @@ declare var axios:any;
 
 class Requests {
 
-    base_url: string = "";
-    instance: any;
+    /**
+     * base url
+     */
+    private base_url: string = "";
+    /**
+     * axios instance
+     */
+    private instance: any;
 
     constructor(access_key: string) {
 
@@ -503,6 +1093,7 @@ class IDTECommerceAnalytics {
     private event: string = "";
     private data: any;
     private meta: Meta;
+    private campaign: Campaign;
 
     /**
      * Class Constructor
@@ -518,6 +1109,8 @@ class IDTECommerceAnalytics {
 
         this.meta = new Meta();
 
+        this.campaign = new Campaign();
+
         this.identify();
 
         this.sessionalize();
@@ -527,7 +1120,7 @@ class IDTECommerceAnalytics {
      * Get JSON of the entire payload as well as the event and meta data
      */
     private toJson() {
-        return {event: this.event, meta: this.meta, data: this.data};
+        return {event: this.event, meta: this.meta, campaign: this.campaign, data: this.data};
     }
 
     /**
@@ -572,24 +1165,45 @@ class IDTECommerceAnalytics {
         return matches ? decodeURIComponent(matches[1]) : undefined;
     }
 
-    private randomString(length: number, chars:string) {
+    /**
+     * Generate a random string
+     *
+     * @param length
+     * @param chars
+     *
+     * @returns string
+     */
+    private randomString(length: number, chars:string): string {
         let result = '';
         for (let i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
         return result;
     }
 
     /**
+     * Get query param
+     * @param name
+     *
+     * @returns string
+     */
+    private getRefQueryParam(name: string): string {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        let regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        let results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+
+    /**
      * Identify a user.
      * If user id is set, then we use it otherwise we set a user id
      */
     private identify() {
-        if (this.user_id.length == 0) {
+        if (this.user_id.length === 0) {
             this.meta.is_anon = true;
 
             // get a user id from cookies, if exists otherwise create one and persist in cookies.
             let user_id = localStorage.getItem("idt_user_id");
 
-            if (user_id == undefined || user_id.length  == 0) {
+            if (user_id === null || user_id.length  === 0) {
 
                 // we create a new user id
                 user_id = this.generateTrackingId();
@@ -630,7 +1244,7 @@ class IDTECommerceAnalytics {
         // check if a cookie tracking id exists
         let idt_session = this.getCookie("idt_session");
 
-        if (idt_session == undefined) {
+        if (idt_session === undefined) {
             // we generate a new tracking id
             idt_session = this.generateTrackingSessionId();
             // add it as a cookie
@@ -643,9 +1257,20 @@ class IDTECommerceAnalytics {
     }
 
     /**
+     * Set campaign parameters
+     */
+    private setCampaign(): void {
+        this.campaign.utm_source = this.getRefQueryParam("utm_source");
+        this.campaign.utm_medium = this.getRefQueryParam("utm_medium");
+        this.campaign.utm_content = this.getRefQueryParam("utm_content");
+        this.campaign.utm_campaign = this.getRefQueryParam("utm_campaign");
+        this.campaign.utm_term = this.getRefQueryParam("utm_term");
+    }
+
+    /**
      * Set the meta information
      */
-    private setMeta() {
+    private setMeta(): void {
 
         let today = new Date();
         let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -672,7 +1297,11 @@ class IDTECommerceAnalytics {
      */
     private on(event: string, data: any, page: string = ""): Promise<any> {
 
+        // set meta details
         this.setMeta();
+
+        // set campaign details
+        this.setCampaign();
 
         if (page.length > 0) {
             this.meta.page = page;
@@ -784,7 +1413,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onProductListViewed(category: string, products: Array<Product> = []): Promise<any> {
+    onProductListViewed(category: string, products: Product[] = []): Promise<any> {
         let payload: ProductListViewed = {category: category, products: products};
 
         return this.on(product_list_viewed, payload)
@@ -801,7 +1430,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onProductListFiltered(category: string, filters: Array<Filter>, sorts: Array<Sort>, products: Array<Product>): Promise<any> {
+    onProductListFiltered(category: string, filters: Filter[], sorts: Sort[], products: Product[]): Promise<any> {
         let payload: ProductListFiltered = {
             category: category,
             filters: filters,
@@ -905,7 +1534,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onCartViewed(cart_id: string, products: Array<Product>): Promise<any> {
+    onCartViewed(cart_id: string, products: Product[]): Promise<any> {
 
         let payload: Cart = {cart_id: cart_id, products: products};
 
@@ -916,7 +1545,7 @@ class IDTECommerceAnalytics {
      * Checkout Started Event
      * Use this to track a user starting the checkout process
      *
-     * @param checkout - checkout details: includes order_id, affiliation (eg affiliate shop), value (Revenue with
+     * @param checkout - checkout details: includes order_id, value (Revenue with
      * discounts and coupons added in), revenue (Revenue associated with the transaction (excluding shipping and tax)),
      * shipping (shipping costs), tax, discount and currency
      * @param products - the list of products
@@ -924,13 +1553,12 @@ class IDTECommerceAnalytics {
      * @returns Promise
      */
     onCheckOutStarted(checkout:
-                          {order_id: string, affiliation: string, value: number, revenue: number, shipping: number,
+                          {order_id: string, value: number, revenue: number, shipping: number,
                               tax: number, discount: number, currency: string},
-                      products: Array<Product>): Promise<any> {
+                      products: Product[]): Promise<any> {
 
         let payload: CheckoutStarted = {
             order_id: checkout.order_id,
-            affiliation: checkout.affiliation,
             value: checkout.value,
             revenue: checkout.revenue,
             shipping: checkout.shipping,
@@ -1018,7 +1646,7 @@ class IDTECommerceAnalytics {
      * Order Completed Event
      * Use this to track a user completing their order
      *
-     * @param order - the details of the order eg order id, checkout id, affiliation (name affiliate shop), subtotal (
+     * @param order - the details of the order eg order id, checkout id,subtotal (
      * Order total after discounts but before taxes and shipping), total (Revenue with discounts and coupons added in),
      * revenue (Revenue associated with the transaction (excluding shipping and tax)), shipping (Shipping cost associated
      * with the transaction), tax, discount, coupon, currency
@@ -1027,15 +1655,14 @@ class IDTECommerceAnalytics {
      * @returns Promise
      */
     onOrderCompleted(order:
-                         {checkout_id: string, order_id: string, affiliation: string, subtotal: number, total: number,
+                         {checkout_id: string, order_id: string,subtotal: number, total: number,
                              revenue: number, shipping: number, tax: number, discount: number, coupon: string,
-                             currency: String},
-                     products: Array<Product>): Promise<any> {
+                             currency: string},
+                     products: Product[]): Promise<any> {
 
         let payload: OrderCompleted = {
             checkout_id: order.checkout_id,
             order_id: order.order_id,
-            affiliation: order.affiliation,
             subtotal: order.subtotal,
             total: order.total,
             revenue: order.revenue,
@@ -1054,7 +1681,7 @@ class IDTECommerceAnalytics {
      * Order Updated Event
      * Use this to track a user updating their order
      *
-     * @param order - the details of the order eg order id, affiliation (name affiliate shop), total (Revenue with
+     * @param order - the details of the order eg order id, total (Revenue with
      *  discounts and coupons added in), revenue (Revenue associated with the transaction (excluding shipping and tax)),
      *  shipping (Shipping cost associated with the transaction), tax, discount, coupon, currency
      * @param products - the list of products
@@ -1062,13 +1689,12 @@ class IDTECommerceAnalytics {
      * @returns Promise
      */
     onOrderUpdated(order:
-                       {order_id: string, affiliation: string, total: number, revenue: number, shipping: number,
-                           tax: number, discount: number, coupon: string, currency: String},
-                   products: Array<Product>): Promise<any> {
+                       {order_id: string, total: number, revenue: number, shipping: number,
+                           tax: number, discount: number, coupon: string, currency: string},
+                   products: Product[]): Promise<any> {
 
         let payload: OrdersUpdated = {
             order_id: order.order_id,
-            affiliation: order.affiliation,
             total: order.total,
             revenue: order.revenue,
             shipping: order.shipping,
@@ -1086,7 +1712,7 @@ class IDTECommerceAnalytics {
      * Order Cancelled Event
      * Use this to track a user cancelling their order
      *
-     * @param order - the details of the order eg order id, affiliation (name affiliate shop), total (Revenue with
+     * @param order - the details of the order eg order id, total (Revenue with
      *  discounts and coupons added in), revenue (Revenue associated with the transaction (excluding shipping and tax)),
      *  shipping (Shipping cost associated with the transaction), tax, discount, coupon, currency
      * @param products - the list of products
@@ -1094,13 +1720,12 @@ class IDTECommerceAnalytics {
      * @returns Promise
      */
     onOrderCancelled(order:
-                         {order_id: string, affiliation: string, total: number, revenue: number, shipping: number,
-                             tax: number, discount: number, coupon: string, currency: String},
-                     products: Array<Product>): Promise<any> {
+                         {order_id: string, total: number, revenue: number, shipping: number,
+                             tax: number, discount: number, coupon: string, currency: string},
+                     products: Product[]): Promise<any> {
 
         let payload: OrderCancelled = {
             order_id: order.order_id,
-            affiliation: order.affiliation,
             total: order.total,
             revenue: order.revenue,
             shipping: order.shipping,
@@ -1125,7 +1750,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onOrderRefunded(order_id: string, total: number, currency: string, products: Array<Product>): Promise<any> {
+    onOrderRefunded(order_id: string, total: number, currency: string, products: Product[]): Promise<any> {
 
         let payload: OrderRefunded = {
             order_id: order_id,
@@ -1143,16 +1768,16 @@ class IDTECommerceAnalytics {
      *
      * @param order_id - the order identifier
      * @param cart_id - the cart identifier
-     * @param coupon_id - the coupon identifier
+     * @param coupon - the coupon identifier
      *
      * @returns Promise
      */
-    onCouponEntered(order_id: string, cart_id: string, coupon_id: string): Promise<any> {
+    onCouponEntered(order_id: string, cart_id: string, coupon: string): Promise<any> {
 
         let payload: CouponEntered = {
             order_id: order_id,
             cart_id: cart_id,
-            coupon_id: coupon_id
+            coupon: coupon
         };
 
         return this.on(coupon_entered, payload);
@@ -1164,19 +1789,17 @@ class IDTECommerceAnalytics {
      *
      * @param order_id - the order identifier
      * @param cart_id - the cart identifier
-     * @param coupon_id - the coupon identifier
-     * @param coupon_name - the coupon name
+     * @param coupon - the coupon identifier
      * @param discount - the discount applied
      *
      * @returns Promise
      */
-    onCouponApplied(order_id: string, cart_id: string, coupon_id: string, coupon_name: string, discount: number): Promise<any> {
+    onCouponApplied(order_id: string, cart_id: string, coupon: string, discount: number): Promise<any> {
 
         let payload: CouponApplied = {
             order_id: order_id,
             cart_id: cart_id,
-            coupon_id: coupon_id,
-            coupon_name: coupon_name,
+            coupon: coupon,
             discount: discount
         };
 
@@ -1189,19 +1812,17 @@ class IDTECommerceAnalytics {
      *
      * @param order_id - the order identifier
      * @param cart_id - the cart identifier
-     * @param coupon_id - the coupon identifier
-     * @param coupon_name - the coupon name
+     * @param coupon - the coupon identifier
      * @param discount - the discount applied
      *
      * @returns Promise
      */
-    onCouponRemoved(order_id: string, cart_id: string, coupon_id: string, coupon_name: string, discount: number): Promise<any> {
+    onCouponRemoved(order_id: string, cart_id: string, coupon: string, discount: number): Promise<any> {
 
         let payload: CouponRemoved = {
             order_id: order_id,
             cart_id: cart_id,
-            coupon_id: coupon_id,
-            coupon_name: coupon_name,
+            coupon: coupon,
             discount: discount
         };
 
@@ -1214,19 +1835,17 @@ class IDTECommerceAnalytics {
      *
      *  @param order_id - the order identifier
      * @param cart_id - the cart identifier
-     * @param coupon_id - the coupon identifier
-     * @param coupon_name - the coupon name
+     * @param coupon - the coupon identifier
      * @param reason - the reason for the declination
      *
      * @returns Promise
      */
-    onCouponDenied(order_id: string, cart_id: string, coupon_id: string, coupon_name: string, reason: string): Promise<any> {
+    onCouponDenied(order_id: string, cart_id: string, coupon: string, reason: string): Promise<any> {
 
         let payload: CouponDenied = {
             order_id: order_id,
             cart_id: cart_id,
-            coupon_id: coupon_id,
-            coupon_name: coupon_name,
+            coupon: coupon,
             reason: reason
         };
 
@@ -1294,7 +1913,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onCartShared(cart_id: string, share_via: string, share_message: string, recipient: string, products: Array<Product>): Promise<any> {
+    onCartShared(cart_id: string, share_via: string, share_message: string, recipient: string, products: Product[]): Promise<any> {
 
         let payload: CartShared = {
             cart_id: cart_id,

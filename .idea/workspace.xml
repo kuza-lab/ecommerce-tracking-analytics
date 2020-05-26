@@ -2,14 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52a37013-e790-4de3-a4f0-987c38458b7c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/analytics.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__tests__/Analytics.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/assets/js/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/assets/js/search.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classes/idtecommerceanalytics.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes/idtecommerceanalytics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classes/meta.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes/meta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classes/requests.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes/requests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/globals.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/globals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/cartproductid.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/cartproductid.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/cartshared.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/cartshared.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/checkoutstarted.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/checkoutstarted.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/checkoutstepcompleted.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/checkoutstepcompleted.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/checkoutstepviewed.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/checkoutstepviewed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/couponapplied.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/couponapplied.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/coupondenied.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/coupondenied.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/couponentered.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/couponentered.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/couponremoved.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/couponremoved.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/eventerror.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/eventerror.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/filter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/ordercancelled.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/ordercancelled.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/ordercompleted.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/ordercompleted.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/orderrefunded.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/orderrefunded.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/ordersupdated.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/ordersupdated.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/paymentinfoentered.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/paymentinfoentered.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/productadded.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productadded.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/productlistfiltered.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productlistfiltered.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/productlistviewed.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productlistviewed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/productremoved.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productremoved.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/productreviewed.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productreviewed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/productshared.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productshared.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/productssearched.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productssearched.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/productwishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productwishlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/productwishlisttocart.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productwishlisttocart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/promotionclicked.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/promotionclicked.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/promotionviewed.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/promotionviewed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/sort.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/sort.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/interfaces/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/analytics.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__tests__/Greeter.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/analytics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,21 +67,21 @@
         <counts>
           <entry key="gitignore" value="2" />
           <entry key="html" value="3" />
-          <entry key="js" value="19" />
+          <entry key="js" value="21" />
           <entry key="json" value="8" />
           <entry key="md" value="2" />
           <entry key="prettierrc" value="1" />
-          <entry key="ts" value="14" />
+          <entry key="ts" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="3" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="19" />
+          <entry key="JavaScript" value="21" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="TypeScript" value="14" />
+          <entry key="TypeScript" value="16" />
           <entry key="tsconfig" value="3" />
         </counts>
       </usages-collector>
@@ -58,19 +94,19 @@
         <counts>
           <entry key="gitignore" value="40" />
           <entry key="html" value="238" />
-          <entry key="json" value="313" />
+          <entry key="json" value="350" />
           <entry key="md" value="1591" />
-          <entry key="ts" value="21377" />
+          <entry key="ts" value="26010" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="238" />
-          <entry key="JSON" value="246" />
+          <entry key="JSON" value="283" />
           <entry key="JavaScript" value="11" />
           <entry key="Markdown" value="1580" />
           <entry key="PLAIN_TEXT" value="40" />
-          <entry key="TypeScript" value="21377" />
+          <entry key="TypeScript" value="26010" />
           <entry key="tsconfig" value="67" />
         </counts>
       </usages-collector>
@@ -90,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/analytics.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="273" column="28" lean-forward="true" selection-start-line="273" selection-start-column="28" selection-end-line="273" selection-end-column="28" />
+            <state relative-caret-position="-16826">
+              <caret line="865" column="7" selection-start-line="865" selection-start-column="7" selection-end-line="865" selection-end-column="7" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -123,8 +159,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            <state relative-caret-position="285">
+              <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/__tests__/Analytics.test.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,10 +199,22 @@
       <find>onProductRemoved</find>
       <find>track(</find>
       <find>onProductListViewed</find>
+      <find>String</find>
+      <find>Array&lt;Product&gt;</find>
+      <find>Array</find>
+      <find>!===</find>
+      <find>setMeta</find>
+      <find>affiliation</find>
+      <find>coupon_name</find>
+      <find>wishlist_id</find>
     </findStrings>
     <replaceStrings>
       <replace>number</replace>
       <replace>product_searched</replace>
+      <replace>string</replace>
+      <replace>Product[]</replace>
+      <replace>!==</replace>
+      <replace>coupon</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -166,7 +226,6 @@
         <option value="$PROJECT_DIR$/tslint.json" />
         <option value="$PROJECT_DIR$/.prettierrc" />
         <option value="$PROJECT_DIR$/jestconfig.json" />
-        <option value="$PROJECT_DIR$/src/__tests__/Greeter.test.ts" />
         <option value="$PROJECT_DIR$/src/Events.ts" />
         <option value="$PROJECT_DIR$/src/Models.ts" />
         <option value="$PROJECT_DIR$/src/requests.ts" />
@@ -178,9 +237,10 @@
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/index.ts" />
         <option value="$PROJECT_DIR$/lib/index.html" />
-        <option value="$PROJECT_DIR$/src/analytics.ts" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/__tests__/Greeter.test.ts" />
+        <option value="$PROJECT_DIR$/src/analytics.ts" />
         <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
@@ -226,6 +286,17 @@
               <item name="idt-ecommerce-analytics" type="b2602c69:ProjectViewProjectNode" />
               <item name="idt-ecommerce-analytics" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="idt-ecommerce-analytics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="idt-ecommerce-analytics" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="analytics.js" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="idt-ecommerce-analytics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="idt-ecommerce-analytics" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -296,18 +367,18 @@
       <option name="presentableId" value="Default" />
       <updated>1590245848316</updated>
       <workItem from="1590245849680" duration="18179000" />
-      <workItem from="1590330370429" duration="25294000" />
+      <workItem from="1590330370429" duration="30612000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43473000" />
+    <option name="totallyTimeSpent" value="48791000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -323,7 +394,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.30510205" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.30510205" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -345,13 +416,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jestconfig.json" />
-    <entry file="file://$PROJECT_DIR$/src/__tests__/Greeter.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tslint.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -401,16 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/analytics.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="273" column="28" lean-forward="true" selection-start-line="273" selection-start-column="28" selection-end-line="273" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -428,10 +482,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/analytics.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16826">
+          <caret line="865" column="7" selection-start-line="865" selection-start-column="7" selection-end-line="865" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__tests__/Analytics.test.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/analytics.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="285">
+          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
         </state>
       </provider>
     </entry>

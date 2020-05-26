@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CheckoutStepCompleted | JavaScript</title>
+	<title>Campaign | JavaScript</title>
 	<meta name="description" content="Documentation for JavaScript">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="checkoutstepcompleted.html">CheckoutStepCompleted</a>
+					<a href="campaign.html">Campaign</a>
 				</li>
 			</ul>
-			<h1>Interface CheckoutStepCompleted</h1>
+			<h1>Class Campaign</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">CheckoutStepCompleted</span>
+						<span class="target">Campaign</span>
 					</li>
 				</ul>
 			</section>
@@ -79,10 +79,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="checkoutstepcompleted.html#checkout_id" class="tsd-kind-icon">checkout_<wbr>id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="checkoutstepcompleted.html#payment_method" class="tsd-kind-icon">payment_<wbr>method</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="checkoutstepcompleted.html#shipping_method" class="tsd-kind-icon">shipping_<wbr>method</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="checkoutstepcompleted.html#step" class="tsd-kind-icon">step</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="campaign.html#utm_campaign" class="tsd-kind-icon">utm_<wbr>campaign</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="campaign.html#utm_content" class="tsd-kind-icon">utm_<wbr>content</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="campaign.html#utm_medium" class="tsd-kind-icon">utm_<wbr>medium</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="campaign.html#utm_source" class="tsd-kind-icon">utm_<wbr>source</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="campaign.html#utm_term" class="tsd-kind-icon">utm_<wbr>term</a></li>
 							</ul>
 						</section>
 					</div>
@@ -90,63 +91,78 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="checkout_id" class="tsd-anchor"></a>
-					<h3>checkout_<wbr>id</h3>
-					<div class="tsd-signature tsd-kind-icon">checkout_<wbr>id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="utm_campaign" class="tsd-anchor"></a>
+					<h3>utm_<wbr>campaign</h3>
+					<div class="tsd-signature tsd-kind-icon">utm_<wbr>campaign<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/kuza-lab/ecommerce-tracking-analytics/blob/7c06e6e/src/analytics.ts#L544">analytics.ts:544</a></li>
+							<li>Defined in <a href="https://github.com/kuza-lab/ecommerce-tracking-analytics/blob/7c06e6e/src/analytics.ts#L207">analytics.ts:207</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Checkout transaction ID</p>
+							<p>Identifies a specific product promotion or strategic campaign.</p>
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="payment_method" class="tsd-anchor"></a>
-					<h3>payment_<wbr>method</h3>
-					<div class="tsd-signature tsd-kind-icon">payment_<wbr>method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="utm_content" class="tsd-anchor"></a>
+					<h3>utm_<wbr>content</h3>
+					<div class="tsd-signature tsd-kind-icon">utm_<wbr>content<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/kuza-lab/ecommerce-tracking-analytics/blob/7c06e6e/src/analytics.ts#L556">analytics.ts:556</a></li>
+							<li>Defined in <a href="https://github.com/kuza-lab/ecommerce-tracking-analytics/blob/7c06e6e/src/analytics.ts#L203">analytics.ts:203</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>payment method selected by the user</p>
+							<p>Identifies what specifically was clicked to bring the user to the site, such as a banner ad or a text link.</p>
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="shipping_method" class="tsd-anchor"></a>
-					<h3>shipping_<wbr>method</h3>
-					<div class="tsd-signature tsd-kind-icon">shipping_<wbr>method<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="utm_medium" class="tsd-anchor"></a>
+					<h3>utm_<wbr>medium</h3>
+					<div class="tsd-signature tsd-kind-icon">utm_<wbr>medium<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/kuza-lab/ecommerce-tracking-analytics/blob/7c06e6e/src/analytics.ts#L552">analytics.ts:552</a></li>
+							<li>Defined in <a href="https://github.com/kuza-lab/ecommerce-tracking-analytics/blob/7c06e6e/src/analytics.ts#L199">analytics.ts:199</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>shipping method selected by the user</p>
+							<p>Identifies what type of link was used, such as cost per click or email.</p>
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="step" class="tsd-anchor"></a>
-					<h3>step</h3>
-					<div class="tsd-signature tsd-kind-icon">step<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="utm_source" class="tsd-anchor"></a>
+					<h3>utm_<wbr>source</h3>
+					<div class="tsd-signature tsd-kind-icon">utm_<wbr>source<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/kuza-lab/ecommerce-tracking-analytics/blob/7c06e6e/src/analytics.ts#L548">analytics.ts:548</a></li>
+							<li>Defined in <a href="https://github.com/kuza-lab/ecommerce-tracking-analytics/blob/7c06e6e/src/analytics.ts#L195">analytics.ts:195</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The checkout step eg step 1</p>
+							<p>Identifies which site sent the traffic, and is a required parameter.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="utm_term" class="tsd-anchor"></a>
+					<h3>utm_<wbr>term</h3>
+					<div class="tsd-signature tsd-kind-icon">utm_<wbr>term<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/kuza-lab/ecommerce-tracking-analytics/blob/7c06e6e/src/analytics.ts#L211">analytics.ts:211</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Identifies search terms.</p>
 						</div>
 					</div>
 				</section>
@@ -164,20 +180,23 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="checkoutstepcompleted.html" class="tsd-kind-icon">Checkout<wbr>Step<wbr>Completed</a>
+					<li class="current tsd-kind-class">
+						<a href="campaign.html" class="tsd-kind-icon">Campaign</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="checkoutstepcompleted.html#checkout_id" class="tsd-kind-icon">checkout_<wbr>id</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="campaign.html#utm_campaign" class="tsd-kind-icon">utm_<wbr>campaign</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="checkoutstepcompleted.html#payment_method" class="tsd-kind-icon">payment_<wbr>method</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="campaign.html#utm_content" class="tsd-kind-icon">utm_<wbr>content</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="checkoutstepcompleted.html#shipping_method" class="tsd-kind-icon">shipping_<wbr>method</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="campaign.html#utm_medium" class="tsd-kind-icon">utm_<wbr>medium</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="checkoutstepcompleted.html#step" class="tsd-kind-icon">step</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="campaign.html#utm_source" class="tsd-kind-icon">utm_<wbr>source</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="campaign.html#utm_term" class="tsd-kind-icon">utm_<wbr>term</a>
 							</li>
 						</ul>
 					</li>
