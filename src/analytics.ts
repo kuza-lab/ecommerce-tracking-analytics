@@ -163,9 +163,9 @@ class Meta {
      */
     is_anon: boolean = true;
     /**
-     * The id of the user. If not logged in, a randomly generated id is used
+     * The user
      */
-    user_id: string = "";
+    user: User = {user_id: "", user_name: "", user_email: "", user_phone: ""};
     /**
      * Date and time for the event
      */
@@ -186,6 +186,10 @@ class Meta {
      * Identifies the browser, device and platform used to access this.
      */
     user_agent: string = "";
+    /**
+     * Client IP Address
+     */
+    ip_address: string = "";
 }
 
 class Campaign {
@@ -1052,7 +1056,7 @@ class Requests {
     /**
      * base url
      */
-    private base_url: string = "";
+    private base_url: string = document.location.protocol + "//portal.insensedata.com/";
     /**
      * axios instance
      */
@@ -1078,7 +1082,16 @@ class Requests {
      */
     saveData(data: any) {
         console.log(data);
-        return this.instance.post('/data-ingestion', data)
+        return this.instance.post('retail/api/clickstream', data)
+    }
+
+    /**
+     * Make a get request
+     *
+     * @param url
+     */
+    getData(url: string) {
+        return this.instance.get(url)
     }
 }
 
@@ -1099,13 +1112,10 @@ class IDTECommerceAnalytics {
      * Class Constructor
      *
      * @param access_key - the access key from your insense portal
-     * @param user_id - the id of a user, if there is a logged in user (or any other identity mechanism used). Can be empty.
      */
-    constructor(access_key: string, user_id: string = "") {
+    constructor(access_key: string) {
 
         this.request = new Requests(access_key);
-
-        this.user_id = user_id;
 
         this.meta = new Meta();
 
@@ -1114,6 +1124,43 @@ class IDTECommerceAnalytics {
         this.identify();
 
         this.sessionalize();
+    }
+
+    /**
+     * Identify a user.
+     * If user id is set, then we use it otherwise we set a user id
+     * @param user_id - the id of a user, if there is a logged in user (or any other identity mechanism used). Can be empty.
+     * @param user_name - the name of the user
+     * @param user_email - the email of the user
+     * @param user_phone - the phone of the user
+     */
+    identify(user_id: string = "", user_name: string = "", user_email: string = "", user_phone: string = ""): IDTECommerceAnalytics {
+
+        if (user_id === "") {
+
+            this.meta.is_anon = true;
+
+            // get a user id from cookies, if exists otherwise create one and persist in cookies.
+            let user_id = localStorage.getItem("idt_user_id");
+
+            if (user_id === null || user_id.length  === 0) {
+
+                // we create a new user id
+                user_id = this.generateTrackingId();
+
+                // set to local storage
+                localStorage.setItem("idt_user_id", user_id);
+            }
+            this.meta.user.user_id = user_id
+        } else {
+            this.meta.is_anon = false;
+            this.meta.user.user_id = user_id;
+            this.meta.user.user_name = user_name;
+            this.meta.user.user_email = user_email;
+            this.meta.user.user_phone = user_phone;
+        }
+
+        return this
     }
 
     /**
@@ -1193,32 +1240,6 @@ class IDTECommerceAnalytics {
     };
 
     /**
-     * Identify a user.
-     * If user id is set, then we use it otherwise we set a user id
-     */
-    private identify() {
-        if (this.user_id.length === 0) {
-            this.meta.is_anon = true;
-
-            // get a user id from cookies, if exists otherwise create one and persist in cookies.
-            let user_id = localStorage.getItem("idt_user_id");
-
-            if (user_id === null || user_id.length  === 0) {
-
-                // we create a new user id
-                user_id = this.generateTrackingId();
-
-                // set to local storage
-                localStorage.setItem("idt_user_id", user_id);
-            }
-            this.meta.user_id = user_id
-        } else {
-            this.meta.is_anon = false;
-            this.meta.user_id = this.user_id
-        }
-    }
-
-    /**
      * Generate a tracking session id
      */
     private generateTrackingSessionId() {
@@ -1270,7 +1291,7 @@ class IDTECommerceAnalytics {
     /**
      * Set the meta information
      */
-    private setMeta(): void {
+    private setMeta() {
 
         let today = new Date();
         let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -1287,18 +1308,25 @@ class IDTECommerceAnalytics {
     }
 
     /**
-     * Handle an event
+     * Get the IP address of the client
+     */
+    private async getIP() {
+
+        let protocol = document.location.protocol;
+
+        let response = await this.request.getData(protocol + "//api.ipify.org?format=json");
+
+        return response.ip
+    }
+
+    /**
+     * Execute an event data saving
      *
      * @param event
      * @param data
      * @param page
-     *
-     * @returns Promise
      */
-    private on(event: string, data: any, page: string = ""): Promise<any> {
-
-        // set meta details
-        this.setMeta();
+    private execute(event: string, data: any, page: string = "") {
 
         // set campaign details
         this.setCampaign();
@@ -1313,6 +1341,34 @@ class IDTECommerceAnalytics {
         let payload = this.toJson();
 
         return this.request.saveData(payload);
+    }
+
+    /**
+     * Handle an event
+     *
+     * @param event
+     * @param data
+     * @param page
+     *
+     * @returns Promise
+     */
+    private async on(event: string, data: any, page: string = ""): Promise<any> {
+
+        // set meta details
+        this.setMeta();
+
+        // if ip is retrieved, we set it and send request otherwise we just send the request
+        this.getIP().then((response: any) => {
+            this.meta.ip_address = response;
+
+            this.execute(event, data, page);
+
+        }).catch((error) => {
+
+            console.log(error);
+
+            this.execute(event, data, page);
+        });
     }
 
     /**

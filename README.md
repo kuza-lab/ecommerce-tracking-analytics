@@ -70,11 +70,19 @@ The library only depends on axios. No jquery or any other library is needed.
 ### Initialize the analytics library
 
 ```javascript
-let user_id = someFunctionToGetLoggedInUser(); // get id of a logged in user, should be empty string if no user is logged in
+let user = someFunctionToGetLoggedInUser(); // get the logged in user, should be empty string if no user is logged in
 
 let access_key = "ABCDEFGHYUIP"; // access key (from your Insense portal) 
 
-idt_analytics = new IDTEcommerceAnalytics(access_key, user_id);
+idt_analytics = new IDTEcommerceAnalytics(access_key);
+
+// if user exists, we set identification with the user details. Only id is compulsory
+if (user) {
+    idt_analytics.identify(user.id, user.name, user.email, user.phone);
+} else {
+    idt_analytics.identify();
+}
+
 ```
 If it doesn't work, confirm that you have whitelisted your domain in the portal. By defauly,. all domains are blacklisted
 

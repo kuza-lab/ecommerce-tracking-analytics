@@ -141,11 +141,19 @@
 				<a href="#initialize-the-analytics-library" id="initialize-the-analytics-library" style="color: inherit; text-decoration: none;">
 					<h3>Initialize the analytics library</h3>
 				</a>
-				<pre><code class="language-javascript"><span class="hljs-keyword">let</span> user_id = someFunctionToGetLoggedInUser(); <span class="hljs-comment">// get id of a logged in user, should be empty string if no user is logged in</span>
+				<pre><code class="language-javascript"><span class="hljs-keyword">let</span> user = someFunctionToGetLoggedInUser(); <span class="hljs-comment">// get the logged in user, should be empty string if no user is logged in</span>
 
 <span class="hljs-keyword">let</span> access_key = <span class="hljs-string">"ABCDEFGHYUIP"</span>; <span class="hljs-comment">// access key (from your Insense portal) </span>
 
-idt_analytics = <span class="hljs-keyword">new</span> IDTEcommerceAnalytics(access_key, user_id);</code></pre>
+idt_analytics = <span class="hljs-keyword">new</span> IDTEcommerceAnalytics(access_key);
+
+<span class="hljs-comment">// if user exists, we set identification with the user details. Only id is compulsory</span>
+<span class="hljs-keyword">if</span> (user) {
+    idt_analytics.identify(user.id, user.name, user.email, user.phone);
+} <span class="hljs-keyword">else</span> {
+    idt_analytics.identify();
+}
+</code></pre>
 				<p>If it doesn&#39;t work, confirm that you have whitelisted your domain in the portal. By defauly,. all domains are blacklisted</p>
 				<a href="#sample-code-to-track-a-user" id="sample-code-to-track-a-user" style="color: inherit; text-decoration: none;">
 					<h3>Sample code to track a user</h3>
