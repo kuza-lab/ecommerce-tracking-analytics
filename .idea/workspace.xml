@@ -1,48 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="52a37013-e790-4de3-a4f0-987c38458b7c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/classes/campaign.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes/campaign.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/classes/idtecommerceanalytics.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes/idtecommerceanalytics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/classes/meta.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes/meta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/classes/requests.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes/requests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/globals.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/globals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/cartproductid.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/cartproductid.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/cartshared.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/cartshared.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/checkoutstarted.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/checkoutstarted.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/checkoutstepcompleted.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/checkoutstepcompleted.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/checkoutstepviewed.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/checkoutstepviewed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/couponapplied.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/couponapplied.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/coupondenied.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/coupondenied.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/couponentered.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/couponentered.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/couponremoved.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/couponremoved.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/eventerror.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/eventerror.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/filter.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/filter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/ordercancelled.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/ordercancelled.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/ordercompleted.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/ordercompleted.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/orderrefunded.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/orderrefunded.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/ordersupdated.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/ordersupdated.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/paymentinfoentered.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/paymentinfoentered.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/productadded.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productadded.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/productlistfiltered.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productlistfiltered.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/productlistviewed.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productlistviewed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/productremoved.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productremoved.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/productreviewed.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productreviewed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/productshared.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productshared.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/productssearched.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productssearched.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/productwishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productwishlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/productwishlisttocart.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/productwishlisttocart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/promotionclicked.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/promotionclicked.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/promotionviewed.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/promotionviewed.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/sort.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/sort.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interfaces/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/analytics.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/analytics.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/analytics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics.ts" afterDir="false" />
-    </list>
+    <list default="true" id="52a37013-e790-4de3-a4f0-987c38458b7c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/analytics.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="1269" column="70" selection-start-line="1269" selection-start-column="70" selection-end-line="1269" selection-end-column="70" />
+            <state relative-caret-position="376">
+              <caret line="1273" column="13" lean-forward="true" selection-start-line="1273" selection-start-column="13" selection-end-line="1273" selection-end-column="13" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -364,12 +323,12 @@
       <workItem from="1591807511964" duration="178000" />
       <workItem from="1591807860056" duration="668000" />
       <workItem from="1591812404968" duration="586000" />
-      <workItem from="1591950464902" duration="2948000" />
+      <workItem from="1591950464902" duration="3951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61784000" />
+    <option name="totallyTimeSpent" value="62787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -513,8 +472,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/analytics.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="1269" column="70" selection-start-line="1269" selection-start-column="70" selection-end-line="1269" selection-end-column="70" />
+        <state relative-caret-position="376">
+          <caret line="1273" column="13" lean-forward="true" selection-start-line="1273" selection-start-column="13" selection-end-line="1273" selection-end-column="13" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
