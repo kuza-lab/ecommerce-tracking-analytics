@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="52a37013-e790-4de3-a4f0-987c38458b7c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/assets/js/search.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/assets/js/search.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/classes/campaign.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes/campaign.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/classes/idtecommerceanalytics.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes/idtecommerceanalytics.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/classes/meta.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes/meta.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/classes/requests.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes/requests.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/globals.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/globals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/interfaces/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/interfaces/cartproductid.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/cartproductid.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/interfaces/cartshared.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/cartshared.html" afterDir="false" />
@@ -42,9 +39,8 @@
       <change beforePath="$PROJECT_DIR$/docs/interfaces/promotionviewed.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/promotionviewed.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/interfaces/sort.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/sort.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/interfaces/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interfaces/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/analytics.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/analytics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/analytics.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/analytics.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/analytics.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/analytics.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/analytics.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/analytics.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,56 +53,60 @@
     <session id="1041003873">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="2" />
-          <entry key="html" value="5" />
-          <entry key="js" value="23" />
-          <entry key="json" value="8" />
+          <entry key="html" value="8" />
+          <entry key="js" value="26" />
+          <entry key="json" value="9" />
           <entry key="md" value="3" />
           <entry key="prettierrc" value="1" />
-          <entry key="ts" value="18" />
+          <entry key="ts" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="5" />
-          <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="23" />
+          <entry key="HTML" value="8" />
+          <entry key="JSON" value="6" />
+          <entry key="JavaScript" value="26" />
           <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="TypeScript" value="18" />
+          <entry key="TypeScript" value="20" />
           <entry key="tsconfig" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TypeScriptServerServiceImpl" value="2" />
+          <entry key="TypeScriptServerServiceImpl" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="40" />
-          <entry key="html" value="294" />
+          <entry key="html" value="305" />
           <entry key="json" value="350" />
           <entry key="md" value="1799" />
-          <entry key="ts" value="26924" />
+          <entry key="ts" value="27479" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="294" />
+          <entry key="HTML" value="305" />
           <entry key="JSON" value="283" />
           <entry key="JavaScript" value="17" />
           <entry key="Markdown" value="1782" />
           <entry key="PLAIN_TEXT" value="40" />
-          <entry key="TypeScript" value="26924" />
+          <entry key="TypeScript" value="27479" />
           <entry key="tsconfig" value="67" />
         </counts>
       </usages-collector>
@@ -115,22 +115,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/index.html">
+        <entry file="file://$PROJECT_DIR$/src/analytics.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+            <state relative-caret-position="316">
+              <caret line="1269" column="70" selection-start-line="1269" selection-start-column="70" selection-end-line="1269" selection-end-column="70" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/analytics.ts">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="1058" column="61" selection-start-line="1058" selection-start-column="61" selection-end-line="1058" selection-end-column="61" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="540">
+              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -155,7 +164,6 @@
       <find>toJson</find>
       <find>ProductListViewed</find>
       <find>onProductRemoved</find>
-      <find>track(</find>
       <find>onProductListViewed</find>
       <find>String</find>
       <find>Array&lt;Product&gt;</find>
@@ -170,6 +178,13 @@
       <find>onPageLoaded</find>
       <find>getData</find>
       <find>127</find>
+      <find>identify(</find>
+      <find>Generator is already executing</find>
+      <find>track</find>
+      <find>track(</find>
+      <find>document.body</find>
+      <find>onProductSear</find>
+      <find>onProductAdded</find>
     </findStrings>
     <replaceStrings>
       <replace>number</replace>
@@ -203,8 +218,8 @@
         <option value="$PROJECT_DIR$/src/__tests__/Greeter.test.ts" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/analytics.ts" />
         <option value="$PROJECT_DIR$/lib/index.html" />
+        <option value="$PROJECT_DIR$/src/analytics.ts" />
       </list>
     </option>
   </component>
@@ -236,13 +251,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="idt-ecommerce-analytics" type="b2602c69:ProjectViewProjectNode" />
               <item name="idt-ecommerce-analytics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="idt-ecommerce-analytics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="idt-ecommerce-analytics" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="idt-ecommerce-analytics" type="b2602c69:ProjectViewProjectNode" />
@@ -264,6 +283,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,7 +316,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (3)">
+  <component name="RunManager" selected="JavaScript Debug.index.html (2)">
     <configuration name="index.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/idt-ecommerce-analytics/typedocs/index.html">
       <method v="2" />
     </configuration>
@@ -320,8 +340,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.html (3)" />
         <item itemvalue="JavaScript Debug.index.html (2)" />
+        <item itemvalue="JavaScript Debug.index.html (3)" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.index.html" />
@@ -339,18 +359,23 @@
       <option name="presentableId" value="Default" />
       <updated>1590245848316</updated>
       <workItem from="1590245849680" duration="18179000" />
-      <workItem from="1590330370429" duration="36632000" />
+      <workItem from="1590330370429" duration="37772000" />
+      <workItem from="1591803027955" duration="1453000" />
+      <workItem from="1591807511964" duration="178000" />
+      <workItem from="1591807860056" duration="668000" />
+      <workItem from="1591812404968" duration="586000" />
+      <workItem from="1591950464902" duration="2948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54811000" />
+    <option name="totallyTimeSpent" value="61784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26800978" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -366,12 +391,35 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.30510205" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.30510205" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.30510205" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -403,7 +451,6 @@
     <entry file="file://$PROJECT_DIR$/src/interfaces.ts" />
     <entry file="file://$PROJECT_DIR$/src/requests.ts" />
     <entry file="file://$PROJECT_DIR$/src/services.ts" />
-    <entry file="file://$PROJECT_DIR$/src/analytics.ts" />
     <entry file="file://$PROJECT_DIR$/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -411,32 +458,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9194" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typedocs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/index.js" />
+    <entry file="file://$PROJECT_DIR$/typedocs/index.html" />
     <entry file="file://$PROJECT_DIR$/src/__tests__/Analytics.test.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -457,34 +484,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/analytics.min.js">
+    <entry file="file://$PROJECT_DIR$/lib/analytics.min.js" />
+    <entry file="file://$PROJECT_DIR$/lib/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1800" selection-start-column="1791" selection-end-column="1800" />
+        <state relative-caret-position="105">
+          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/analytics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="222" column="34" lean-forward="true" selection-start-line="222" selection-start-column="34" selection-end-line="222" selection-end-column="34" />
+        <state relative-caret-position="-12887" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/analytics.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="1058" column="61" selection-start-line="1058" selection-start-column="61" selection-end-line="1058" selection-end-column="61" />
+        <state relative-caret-position="316">
+          <caret line="1269" column="70" selection-start-line="1269" selection-start-column="70" selection-end-line="1269" selection-end-column="70" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
         </state>
       </provider>
     </entry>

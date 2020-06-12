@@ -1121,8 +1121,6 @@ class IDTECommerceAnalytics {
 
         this.campaign = new Campaign();
 
-        this.identify();
-
         this.sessionalize();
     }
 
@@ -1269,7 +1267,7 @@ class IDTECommerceAnalytics {
             // we generate a new tracking id
             idt_session = this.generateTrackingSessionId();
             // add it as a cookie
-            this.setCookie("idt_session", idt_session, {'max-age': 3600});
+            this.setCookie("idt_session", idt_session, {'max-age': 600});
             // add it to th session
             this.meta.session = this.generateTrackingSessionId();
         } else {
@@ -1298,7 +1296,8 @@ class IDTECommerceAnalytics {
         let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         let dateTime = date+' '+time;
 
-        let page = document.body.getAttribute("data-idt-page");
+        let page = location.pathname.substr(1).split("/")[0];
+        page = page.length == 0 ? "home" : page;
 
         this.meta.referrer = document.referrer;
         this.meta.url = window.location.href;
@@ -1410,7 +1409,10 @@ class IDTECommerceAnalytics {
 
         // page load event
         window.addEventListener("load", () => {
-            let page = document.body.getAttribute("data-idt-page");
+
+            let page = location.pathname.substr(1).split("/")[0];
+            page = page.length == 0 ? "home" : page;
+
             this.on(page_load, {page: page})
         });
 
@@ -1443,7 +1445,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onPageLoaded(page: string): Promise<any> {
+    async onPageLoaded(page: string): Promise<any> {
         return this.on(page_load, {page: page})
     }
 
@@ -1455,7 +1457,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onProductSearched(keyword: string): Promise<any> {
+    async onProductSearched(keyword: string): Promise<any> {
         let payload: ProductsSearched = {query: keyword};
         return this.on(product_searched, payload)
     }
@@ -1469,7 +1471,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onProductListViewed(category: string, products: Product[] = []): Promise<any> {
+    async onProductListViewed(category: string, products: Product[] = []): Promise<any> {
         let payload: ProductListViewed = {category: category, products: products};
 
         return this.on(product_list_viewed, payload)
@@ -1486,7 +1488,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onProductListFiltered(category: string, filters: Filter[], sorts: Sort[], products: Product[]): Promise<any> {
+    async onProductListFiltered(category: string, filters: Filter[], sorts: Sort[], products: Product[]): Promise<any> {
         let payload: ProductListFiltered = {
             category: category,
             filters: filters,
@@ -1507,7 +1509,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onPromotionViewed(promotion_id: string, name: string, creative: string, position: string): Promise<any> {
+    async onPromotionViewed(promotion_id: string, name: string, creative: string, position: string): Promise<any> {
 
         let payload: PromotionViewed = {promotion_id: promotion_id, creative: creative, name: name, position: position};
 
@@ -1525,7 +1527,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onPromotionClicked(promotion_id: string, name: string, creative: string, position: string): Promise<any> {
+    async onPromotionClicked(promotion_id: string, name: string, creative: string, position: string): Promise<any> {
 
         let payload: PromotionClicked = {promotion_id: promotion_id, creative: creative, name: name, position: position};
 
@@ -1540,7 +1542,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onProductClicked(product: Product): Promise<any> {
+    async onProductClicked(product: Product): Promise<any> {
 
         return this.on(product_clicked, product);
     }
@@ -1553,7 +1555,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onProductViewed(product: Product): Promise<any> {
+    async onProductViewed(product: Product): Promise<any> {
         return this.on(product_viewed, product);
     }
 
@@ -1565,7 +1567,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onProductAdded(product: ProductAdded): Promise<any> {
+    async onProductAdded(product: ProductAdded): Promise<any> {
         return this.on(product_added, product)
     }
 
@@ -1577,7 +1579,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onProductRemoved(product: ProductRemoved): Promise<any> {
+    async onProductRemoved(product: ProductRemoved): Promise<any> {
         return this.on(product_removed, product)
     }
 
@@ -1590,7 +1592,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onCartViewed(cart_id: string, products: Product[]): Promise<any> {
+    async onCartViewed(cart_id: string, products: Product[]): Promise<any> {
 
         let payload: Cart = {cart_id: cart_id, products: products};
 
@@ -1608,19 +1610,19 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onCheckOutStarted(checkout:
+    async onCheckOutStarted(checkout:
                           {order_id: string, value: number, revenue: number, shipping: number,
                               tax: number, discount: number, currency: string},
                       products: Product[]): Promise<any> {
 
         let payload: CheckoutStarted = {
-            order_id: checkout.order_id,
-            value: checkout.value,
-            revenue: checkout.revenue,
-            shipping: checkout.shipping,
-            tax: checkout.tax,
-            discount: checkout.discount,
-            currency: checkout.currency,
+            order_id: checkout !== undefined && checkout.order_id !== undefined ? checkout.order_id : "",
+            value: checkout !== undefined && checkout.value !== undefined ? checkout.value : 0,
+            revenue: checkout !== undefined && checkout.revenue !== undefined ? checkout.revenue : 0,
+            shipping: checkout !== undefined && checkout.shipping !== undefined ? checkout.shipping : 0,
+            tax: checkout !== undefined && checkout.tax !== undefined ? checkout.tax : 0,
+            discount: checkout !== undefined && checkout.discount !== undefined ? checkout.discount : 0,
+            currency: checkout !== undefined && checkout.currency !== undefined ? checkout.currency : "",
             products: products
         };
 
@@ -1638,7 +1640,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onCheckOutStepViewed(checkout_id: string, step: number, shipping_method: string, payment_method: string): Promise<any> {
+    async onCheckOutStepViewed(checkout_id: string, step: number, shipping_method: string, payment_method: string): Promise<any> {
 
         let payload: CheckoutStepViewed = {
             checkout_id: checkout_id,
@@ -1661,7 +1663,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onCheckOutStepCompleted(checkout_id: string, step: number, shipping_method: string, payment_method: string): Promise<any> {
+    async onCheckOutStepCompleted(checkout_id: string, step: number, shipping_method: string, payment_method: string): Promise<any> {
 
         let payload: CheckoutStepCompleted = {
             checkout_id: checkout_id,
@@ -1685,7 +1687,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onPaymentInfoEntered(order_id: string, checkout_id: string, step: number, shipping_method: string, payment_method: string): Promise<any> {
+    async onPaymentInfoEntered(order_id: string, checkout_id: string, step: number, shipping_method: string, payment_method: string): Promise<any> {
 
         let payload: PaymentInfoEntered = {
             order_id: order_id,
@@ -1710,23 +1712,24 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onOrderCompleted(order:
+    async onOrderCompleted(order:
                          {checkout_id: string, order_id: string,subtotal: number, total: number,
                              revenue: number, shipping: number, tax: number, discount: number, coupon: string,
                              currency: string},
                      products: Product[]): Promise<any> {
 
         let payload: OrderCompleted = {
-            checkout_id: order.checkout_id,
-            order_id: order.order_id,
-            subtotal: order.subtotal,
-            total: order.total,
-            revenue: order.revenue,
-            shipping: order.shipping,
-            tax: order.tax,
-            discount: order.discount,
-            coupon: order.coupon,
-            currency: order.currency,
+
+            checkout_id: order !== undefined && order.checkout_id !== undefined ? order.checkout_id : "",
+            order_id: order !== undefined && order.order_id !== undefined ? order.order_id : "",
+            subtotal: order !== undefined && order.subtotal !== undefined ? order.subtotal : 0,
+            total: order !== undefined && order.total !== undefined ? order.total : 0,
+            revenue: order !== undefined && order.revenue !== undefined ? order.revenue : 0,
+            shipping: order !== undefined && order.shipping !== undefined ? order.shipping : 0,
+            tax: order !== undefined && order.tax !== undefined ? order.tax : 0,
+            discount: order !== undefined && order.discount !== undefined ? order.discount : 0,
+            coupon: order !== undefined && order.coupon !== undefined ? order.coupon : "",
+            currency: order !== undefined && order.currency !== undefined ? order.currency : "",
             products: products
         };
 
@@ -1744,20 +1747,20 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onOrderUpdated(order:
+    async onOrderUpdated(order:
                        {order_id: string, total: number, revenue: number, shipping: number,
                            tax: number, discount: number, coupon: string, currency: string},
                    products: Product[]): Promise<any> {
 
         let payload: OrdersUpdated = {
-            order_id: order.order_id,
-            total: order.total,
-            revenue: order.revenue,
-            shipping: order.shipping,
-            tax: order.tax,
-            discount: order.discount,
-            coupon: order.coupon,
-            currency: order.currency,
+            order_id: order !== undefined && order.order_id !== undefined ? order.order_id : "",
+            total: order !== undefined && order.total !== undefined ? order.total : 0,
+            revenue: order !== undefined && order.revenue !== undefined ? order.revenue : 0,
+            shipping: order !== undefined && order.shipping !== undefined ? order.shipping : 0,
+            tax: order !== undefined && order.tax !== undefined ? order.tax : 0,
+            discount: order !== undefined && order.discount !== undefined ? order.discount : 0,
+            coupon: order !== undefined && order.coupon !== undefined ? order.coupon : "",
+            currency: order !== undefined && order.currency !== undefined ? order.currency : "",
             products: products
         };
 
@@ -1775,20 +1778,20 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onOrderCancelled(order:
+    async onOrderCancelled(order:
                          {order_id: string, total: number, revenue: number, shipping: number,
                              tax: number, discount: number, coupon: string, currency: string},
                      products: Product[]): Promise<any> {
 
         let payload: OrderCancelled = {
-            order_id: order.order_id,
-            total: order.total,
-            revenue: order.revenue,
-            shipping: order.shipping,
-            tax: order.tax,
-            discount: order.discount,
-            coupon: order.coupon,
-            currency: order.currency,
+            order_id: order !== undefined && order.order_id !== undefined ? order.order_id : "",
+            total: order !== undefined && order.total !== undefined ? order.total : 0,
+            revenue: order !== undefined && order.revenue !== undefined ? order.revenue : 0,
+            shipping: order !== undefined && order.shipping !== undefined ? order.shipping : 0,
+            tax: order !== undefined && order.tax !== undefined ? order.tax : 0,
+            discount: order !== undefined && order.discount !== undefined ? order.discount : 0,
+            coupon: order !== undefined && order.coupon !== undefined ? order.coupon : "",
+            currency: order !== undefined && order.currency !== undefined ? order.currency : "",
             products: products
         };
 
@@ -1806,7 +1809,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onOrderRefunded(order_id: string, total: number, currency: string, products: Product[]): Promise<any> {
+    async onOrderRefunded(order_id: string, total: number, currency: string, products: Product[]): Promise<any> {
 
         let payload: OrderRefunded = {
             order_id: order_id,
@@ -1828,7 +1831,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onCouponEntered(order_id: string, cart_id: string, coupon: string): Promise<any> {
+    async onCouponEntered(order_id: string, cart_id: string, coupon: string): Promise<any> {
 
         let payload: CouponEntered = {
             order_id: order_id,
@@ -1850,7 +1853,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onCouponApplied(order_id: string, cart_id: string, coupon: string, discount: number): Promise<any> {
+    async onCouponApplied(order_id: string, cart_id: string, coupon: string, discount: number): Promise<any> {
 
         let payload: CouponApplied = {
             order_id: order_id,
@@ -1873,7 +1876,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onCouponRemoved(order_id: string, cart_id: string, coupon: string, discount: number): Promise<any> {
+    async onCouponRemoved(order_id: string, cart_id: string, coupon: string, discount: number): Promise<any> {
 
         let payload: CouponRemoved = {
             order_id: order_id,
@@ -1896,7 +1899,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onCouponDenied(order_id: string, cart_id: string, coupon: string, reason: string): Promise<any> {
+    async onCouponDenied(order_id: string, cart_id: string, coupon: string, reason: string): Promise<any> {
 
         let payload: CouponDenied = {
             order_id: order_id,
@@ -1916,7 +1919,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onProductAddedToWishList(product: ProductWishlist): Promise<any> {
+    async onProductAddedToWishList(product: ProductWishlist): Promise<any> {
 
         return this.on(product_added_to_wish_list, product);
     }
@@ -1929,7 +1932,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onProductRemovedFromWishList(product: ProductWishlist): Promise<any> {
+    async onProductRemovedFromWishList(product: ProductWishlist): Promise<any> {
         return this.on(product_removed_from_wish_list, product)
     }
 
@@ -1941,7 +1944,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onWishListProductAddedToCart(product: ProductWishlistToCart): Promise<any> {
+    async onWishListProductAddedToCart(product: ProductWishlistToCart): Promise<any> {
         return this.on(wish_list_product_added_to_cart, product)
     }
 
@@ -1953,7 +1956,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onProductShared(product: ProductShared): Promise<any> {
+    async onProductShared(product: ProductShared): Promise<any> {
         return this.on(product_shared, product)
     }
 
@@ -1969,7 +1972,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onCartShared(cart_id: string, share_via: string, share_message: string, recipient: string, products: Product[]): Promise<any> {
+    async onCartShared(cart_id: string, share_via: string, share_message: string, recipient: string, products: Product[]): Promise<any> {
 
         let payload: CartShared = {
             cart_id: cart_id,
@@ -1993,7 +1996,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onProductReviewed(product_id: string, review_id: string, review_body: string, rating: number): Promise<any> {
+    async onProductReviewed(product_id: string, review_id: string, review_body: string, rating: number): Promise<any> {
 
         let payload: ProductReviewed = {
             product_id: product_id,
@@ -2013,7 +2016,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onLogIn(user: User): Promise<any> {
+    async onLogIn(user: User): Promise<any> {
         return this.on(logged_in, user);
     }
 
@@ -2025,7 +2028,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onLogOut(user_id: string): Promise<any> {
+    async onLogOut(user_id: string): Promise<any> {
         return this.on(logged_out, {user_id: user_id})
     }
 
@@ -2037,7 +2040,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onSignUp(user: User): Promise<any> {
+    async onSignUp(user: User): Promise<any> {
         return this.on(signed_up, user);
     }
 
@@ -2051,7 +2054,7 @@ class IDTECommerceAnalytics {
      *
      * @returns Promise
      */
-    onError(type: string, message: string, data: any): Promise<any> {
+    async onError(type: string, message: string, data: any): Promise<any> {
 
         let payload: EventError = {
             type: type,
